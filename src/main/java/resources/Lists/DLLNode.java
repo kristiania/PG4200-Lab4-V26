@@ -1,4 +1,4 @@
-package assignment.LinkedList;/*  CSI2114 Lab 2 - ListNode.java
+package resources.Lists;/*  CSI2114 Lab 2 - ListNode.java
  *  
  *  Class node of a doubly linked list   
  *  

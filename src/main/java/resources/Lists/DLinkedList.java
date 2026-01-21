@@ -4,9 +4,7 @@
  *
  */
 
-package solution;
-
-import assignment.LinkedList.DLLNode;
+package resources.Lists;
 
 public class DLinkedList {
 

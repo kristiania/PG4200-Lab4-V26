@@ -1,8 +1,4 @@
-package solution;
-
-import resources.Stacks.Stack;
-import resources.Stacks.StackEmptyException;
-import resources.Stacks.StackFullException;
+package resources.Stacks;
 
 public class SArray implements Stack {
 
