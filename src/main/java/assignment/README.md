@@ -4,6 +4,8 @@
 
 ## Experimental Analysis of Algorithms
 
+Taken, modified and revised from https://github.com/fletchto99/CSI2110/tree/master .
+
 In this lab you are going to experimentally measure the running time of algorithms.
 We first give you some direction on how to measure the running time of a method.
 
