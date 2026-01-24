@@ -42,6 +42,7 @@ public class AlgAnalysis {
 				Arrays.sort(test);
 				long end = System.nanoTime();
 				long time = end - start;
+				// keep the "worst" running time out of 10 tests
 				if(res < time) res = time;
 			}
 
@@ -58,10 +59,13 @@ public class AlgAnalysis {
 	 * @return time taken in nano seconds
 	 */
 	public static long unique1Runtime(int n){
-		// add your code here (part 2)
+		/*
+		 *
+		 * add your code here (part 2)
+		 *
+		 */
 		return 0;
 	}
-	
 	/**
 	 * creates an array of size n, then tests the runtime of findDups2 using that array
 	 *
@@ -69,7 +73,11 @@ public class AlgAnalysis {
 	 * @return time taken in nano seconds
 	 */
 	public static long unique2Runtime(int n){
-		// add your code here (part 2)
+		/*
+		 *
+		 * add your code here (part 2)
+		 *
+		 */
 		return 0;
 	}
 	
