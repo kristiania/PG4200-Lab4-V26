@@ -19,7 +19,7 @@ Maybe you have already used that for the extra exercise i Lab 1 for analysing _l
 Using nanoseconds you can get meaningful values for fast methods than when using seconds would give you always 0.
 
 To measure the time of a method, record the time **before** the call to the method
-and **after** the call to the method and calculate **after-before**.
+and **after** the call to the method and calculate **after minus before**.
 
 
 
