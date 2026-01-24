@@ -15,6 +15,7 @@ Ideally, we would like to measure the CPU time of your method, not the elapsed c
 The difference is that if your operating system is busy with other tasks which are sharing your CPU, 
 the clock time is not going to be a precise measure of the time spent on your method.
 However, for simplicity you may use _System.nanoTime()_ which records the clock time in nanoseconds.
+Maybe you have already used that for the extra exercise i Lab 1 for analysing _linearSearch_ ?
 Using nanoseconds you can get meaningful values for fast methods that when using seconds would give you always 0.
 
 To measure the time of a method, record the time **before** the call to the method
