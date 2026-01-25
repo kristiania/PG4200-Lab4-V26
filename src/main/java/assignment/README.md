@@ -123,7 +123,7 @@ and outputs obtained.
 
 - **Unique1, Unique2, AlgAnalysis**
 
-- Follow the specifications in Part 1)  to implement
+- Follow the specifications in Part 1)  to understand
 the method **arraySortRuntime(int count, int maxsize)**
 
 - Choose a large maximum array size (maxsize) and enough number of intermediate
@@ -142,4 +142,4 @@ as O(n^2) or O(n log n). You may try different combinations of count and maxsize
 ### Hints and stuff
 
 
-- Solution: You can find a solution proposal i the `src/main/java/solution` folder.
+- Solution: You can find a solution proposal for part 2 in the `src/main/java/solution` folder.
