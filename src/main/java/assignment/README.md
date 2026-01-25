@@ -15,7 +15,7 @@ Ideally, we would like to measure the CPU time of your method, not the elapsed c
 The difference is that if your operating system is busy with other tasks which are sharing your CPU, 
 the clock time is not going to be a precise measure of the time spent on your method.
 However, for simplicity you may use _System.nanoTime()_ which records the clock time in nanoseconds.
-Maybe you have already used that for the extra exercise i Lab 1 for analysing _linearSearch_ ?
+Maybe you have already used that for the extra exercise in [Lab 1 for analysing _linearSearch_](https://github.com/kristiania/PG4200-Lab1-V26/tree/master/src/main/java/assignment#task-implement-algorithm-linear-search-on-data-structure-array-in-java) ?
 Using nanoseconds you can get meaningful values for fast methods than when using seconds would give you always 0.
 
 To measure the time of a method, record the time **before** the call to the method
@@ -25,7 +25,7 @@ and **after** the call to the method and calculate **after minus before**.
 
 ### Part 1) Experimenting with performance of java.utils.Arrays.sort() method</h2>
 
-Method you will implement: **AlgAnalysis.arraySortRuntime(int)**
+Method you will use for analysing: **AlgAnalysis.arraySortRuntime(int)**
 
 
 Java provides the method **java.utils.Arrays.sort(int[])**.
@@ -65,7 +65,7 @@ You will loop through array sizes as specified by the values above;
 for each array size n you will repeat the experiment x=10 times with randomly 
 shuffled arrays and record the maximum time over the x=10 runs. 
 For each n this "maximum over x=10 runs" 
-is the time that should be reported as T(n) which we will take as the "worst case" running time of the algorithm for input of size n.
+is the time that should be reported as T(n) which we will take as the "worst case" (Big-Oh) running time of the algorithm for input of size n.
 A method to randomly shuffle an array is provided.
 
 
@@ -81,7 +81,7 @@ To test the two hypothesis above, the method prints for each n, the following qu
 If the method indeed behaves as O(n log n), we expect that the last fraction will
 converge to a constant, while the second-to-last fraction should be decreasing.
 
-### Part 2) Comparing the running times of two methods for determining if an array has duplicate entries</h2>
+### Part 2) Comparing the running times of two methods for determining if an array has duplicate entries
 
 
 Methods you will implement: **unique1Runtime(int)** and **unique2Runtime(int)**
