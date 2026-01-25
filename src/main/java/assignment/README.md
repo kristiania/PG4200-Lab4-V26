@@ -15,7 +15,7 @@ Ideally, we would like to measure the CPU time of your method, not the elapsed c
 The difference is that if your operating system is busy with other tasks which are sharing your CPU, 
 the clock time is not going to be a precise measure of the time spent on your method.
 However, for simplicity you may use _System.nanoTime()_ which records the clock time in nanoseconds.
-Maybe you have already used that for the extra exercise i Lab 1 for analysing _linearSearch_ ?
+Maybe you have already used that for the extra exercise in [Lab 1 for analysing _linearSearch_](https://github.com/kristiania/PG4200-Lab1-V26/tree/master/src/main/java/assignment#task-implement-algorithm-linear-search-on-data-structure-array-in-java) ?
 Using nanoseconds you can get meaningful values for fast methods than when using seconds would give you always 0.
 
 To measure the time of a method, record the time **before** the call to the method
@@ -25,7 +25,7 @@ and **after** the call to the method and calculate **after minus before**.
 
 ### Part 1) Experimenting with performance of java.utils.Arrays.sort() method</h2>
 
-Method you will implement: **AlgAnalysis.arraySortRuntime(int)**
+Method you will use for analysing: **AlgAnalysis.arraySortRuntime(int)**
 
 
 Java provides the method **java.utils.Arrays.sort(int[])**.
@@ -47,12 +47,12 @@ the average, behaving as _O(n log n)_ for most inputs.
 In this part of the lab, you will experiment computing the running time (CPU time)
 for **java.utils.Arrays.sort(int[])** for increasing values of array input size n.
 
-**You will design and perform an experiment to verify the following two hypothesis:
+**You will  perform an experiment to verify the following two hypothesis:
 whether the running time of this method behaves more closely as  __O(n^2)__
 or more closely as __O(n log n)__.**
 
 
-When running the code, select option 0 for Part 1).
+When running the code, select option 0 when prompted for choosing Part 1).
 
 The main program for method **AlgAnalysis** already prompts you for the 
 following quantities: "number of arrays to test"(count) and "largest array size"(maxsize)
@@ -65,7 +65,7 @@ You will loop through array sizes as specified by the values above;
 for each array size n you will repeat the experiment x=10 times with randomly 
 shuffled arrays and record the maximum time over the x=10 runs. 
 For each n this "maximum over x=10 runs" 
-is the time that should be reported as T(n) which we will take as the "worst case" running time of the algorithm for input of size n.
+is the time that should be reported as T(n) which we will take as the "worst case" (Big-Oh) running time of the algorithm for input of size n.
 A method to randomly shuffle an array is provided.
 
 
@@ -74,21 +74,23 @@ experiment. Feel free to  increase x and verify if the same results
 are observed.)
 
 
-To test the two hypothesis above, we ask you print for each n, the following quantities:<br>
-n, T(n), T(n)/(n*n), T(n)/(n log n)
-<br>
+To test the two hypothesis above, the method prints for each n, the following quantities:
+
+**n, T(n), T(n)/(n*n), T(n)/(n log n)**
+
 If the method indeed behaves as O(n log n), we expect that the last fraction will
 converge to a constant, while the second-to-last fraction should be decreasing.
 
-### Part 2) Comparing the running times of two methods for determining if an array has duplicate entries</h2>
+### Part 2) Comparing the running times of two methods for determining if an array has duplicate entries
 
 
-Method you will implement: **unique1Runtime(int)** and **unique2Runtime(int)**.
+Methods you will implement: **unique1Runtime(int)** and **unique2Runtime(int)**
+Line 60 through 81 in **AlgAnalysis**.
 
 
 We will be comparing the running times of the 
 methods **Unique1.unique1(int[])** and **Unique2.unique2(int[])**.
-The two algorithms are theoretically analyzed in the textbook in pages 174-175 and is also discussed in your first DGD. 
+The two algorithms are theoretically analyzed in the textbook _Data Structures & Algorithms in Java_ in pages 162-163 (sixth edition). . 
 
 
 The worst-case running time of **unique1** is shown to be O(n^2).

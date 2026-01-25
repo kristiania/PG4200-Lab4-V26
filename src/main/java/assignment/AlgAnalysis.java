@@ -18,6 +18,7 @@ package assignment;
 // Revision 1.1  2015/09/19 11:21:00  Lucia Moura
 // ==========================================================================
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 public class AlgAnalysis {
@@ -31,7 +32,24 @@ public class AlgAnalysis {
 	 * @param  count number of arrays tested.
 	 */
 	public static void arraySortRuntime(int count, int maxSize){
-		// add your code here (part 1)
+		int interval = maxSize/count;
+		if (interval==0) interval=1;
+		for(int i = interval; i <= maxSize; i+=interval){
+			long res = 0;
+			for(int j =0; j<10; j++){
+				int[] test = randomizeArray(genArray(i));
+				long start = System.nanoTime();
+				Arrays.sort(test);
+				long end = System.nanoTime();
+				long time = end - start;
+				// keep the "worst" running time out of 10 tests
+				if(res < time) res = time;
+			}
+
+			double nSqr= ((double)res/(double)(i*i));
+			double nLog = (double)res/((double)i*(Math.log(i)/Math.log(2)));
+			System.out.println("N: "+i+", T(n): "+res+" nanosecs, T(n)/(n*n): "+nSqr+", T(n)/(nlogn): "+nLog);
+		}
 	}
 	
 	/**
@@ -41,10 +59,13 @@ public class AlgAnalysis {
 	 * @return time taken in nano seconds
 	 */
 	public static long unique1Runtime(int n){
-		// add your code here (part 2)
+		/*
+		 *
+		 * add your code here (part 2)
+		 *
+		 */
 		return 0;
 	}
-	
 	/**
 	 * creates an array of size n, then tests the runtime of findDups2 using that array
 	 *
@@ -52,7 +73,11 @@ public class AlgAnalysis {
 	 * @return time taken in nano seconds
 	 */
 	public static long unique2Runtime(int n){
-		// add your code here (part 2)
+		/*
+		 *
+		 * add your code here (part 2)
+		 *
+		 */
 		return 0;
 	}
 	
@@ -97,55 +122,10 @@ public class AlgAnalysis {
 	 * @param  time time in nanoseconds
 	 * @return      time in seconds as a double
 	 */
-	private static double nanoToSeconds(long time){
+	public static double nanoToSeconds(long time){
 		return (double)time / 1000000000.0;
 	}
 
-	/**
-	 * Main method
-	 * Provides prompts for all experiments
-	 */
-	public static void main(String[] args){
-		Scanner scanner = new Scanner(System.in);
-		while(true){
-			System.out.println("Enter 0 to test Arrays.sort(), 1 for unique, any other number to exit");
-			int opt1 = scanner.nextInt();
-			if(opt1 == 0){
-				System.out.println("Enter number of arrays to test");
-				int count = scanner.nextInt();
-				System.out.println("Enter largest array size");
-				int n = scanner.nextInt();
-				AlgAnalysis.arraySortRuntime(count, n);			
-				System.out.println();
-			}
-			else if(opt1 == 1){
-				while(true){
-					System.out.println("Enter 1 to test unique1, 2 for unique2, any other number to exit");
-					int opt2 = scanner.nextInt();
-					if(opt2 == 1){
-						System.out.println("Enter n value");
-						int n = scanner.nextInt();
-						System.out.println("Time Elapsed: "+AlgAnalysis.nanoToSeconds(AlgAnalysis.unique1Runtime(n))+" secs");
-						System.out.println();
-					}
-					else if(opt2 == 2){
-						System.out.println("Enter n value");
-						int n = scanner.nextInt();
-						System.out.println("Time Elapsed: "+AlgAnalysis.nanoToSeconds(AlgAnalysis.unique2Runtime(n))+" secs");
-						System.out.println();
-					}
-					else{
-						System.out.println("End of Program!");
-						return;
-					}
-				}
-			}
-			else {
-				System.out.println("End of Program!");
-				return;
-			}
-			
-		}
-	}
+
 
 }
