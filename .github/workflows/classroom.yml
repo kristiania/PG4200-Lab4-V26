@@ -32,6 +32,6 @@ jobs:
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
-          exercise01_RESULTS: "${{steps.exercise01.outputs.result}}"
+          EXERCISE01_RESULTS: "${{steps.exercise01.outputs.result}}"
         with:
           runners: exercise01
