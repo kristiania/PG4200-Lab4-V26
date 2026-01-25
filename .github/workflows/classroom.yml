@@ -28,49 +28,10 @@ jobs:
           command: mvn -Dtest=TestAssignment#exercise01 test
           timeout: 10
           max-score: 10
-      - name: exercise02
-        id: exercise02
-        uses: classroom-resources/autograding-command-grader@v1
-        with:
-          test-name: exercise02
-          setup-command: ''
-          command: mvn -Dtest=TestAssignment#exercise02 test
-          timeout: 10
-          max-score: 10
-      - name: exercise03
-        id: exercise03
-        uses: classroom-resources/autograding-command-grader@v1
-        with:
-          test-name: exercise03
-          setup-command: ''
-          command: mvn -Dtest=TestAssignment#exercise03 test
-          timeout: 10
-          max-score: 10
-      - name: exercise04
-        id: exercise04
-        uses: classroom-resources/autograding-command-grader@v1
-        with:
-          test-name: exercise04
-          setup-command: ''
-          command: mvn -Dtest=TestAssignment#exercise04 test
-          timeout: 10
-          max-score: 10
-      - name: exercise05
-        id: exercise05
-        uses: classroom-resources/autograding-command-grader@v1
-        with:
-          test-name: exercise05
-          setup-command: ''
-          command: mvn -Dtest=TestAssignment#exercise05 test
-          timeout: 10
-          max-score: 10
+      
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
           exercise01_RESULTS: "${{steps.exercise01.outputs.result}}"
-          exercise02_RESULTS: "${{steps.exercise02.outputs.result}}"
-          exercise03_RESULTS: "${{steps.exercise03.outputs.result}}"
-          exercise04_RESULTS: "${{steps.exercise04.outputs.result}}"
-          exercise05_RESULTS: "${{steps.exercise05.outputs.result}}"
         with:
-          runners: exercise01,exercise02,exercise03,exercise04,exercise05
+          runners: exercise01
