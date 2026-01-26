@@ -56,7 +56,7 @@ When running the code, select option 0 when prompted for choosing Part 1).
 
 The main program for method **AlgAnalysis** already prompts you for the 
 following quantities: "number of arrays to test"(count) and "largest array size"(maxsize)
-which are used in the call of the method you must implement: **AlgAnalysisSol.arraySortRuntime(count, maxsize)**.
+which are used in the call of the method: **AlgAnalysisSol.arraySortRuntime(count, maxsize)**.
 This means you should test "count" equally spaced array sizes where the largest
 has size "maxsize".
 
