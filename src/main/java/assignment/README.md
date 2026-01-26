@@ -23,12 +23,12 @@ and **after** the call to the method and calculate **after minus before**.
 
 
 
-### Part 1) Experimenting with performance of java.utils.Arrays.sort() method</h2>
+### Part 1) Experimenting with performance of java.utils.Arrays.sort() method
 
-Method you will use for analysing: **AlgAnalysis.arraySortRuntime(int)**
+Method you will use for analysing: [**AlgAnalysis.arraySortRuntime(count, maxsize)**](https://github.com/kristiania/PG4200-Lab4-V26/blob/614f9589395685997fb42f12987a24f459e39914/src/main/java/assignment/AlgAnalysis.java#L34)
 
 
-Java provides the method **java.utils.Arrays.sort(int[])**.
+Java provides the method [**java.utils.Arrays.sort(int[])**](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-int:A-).
 From Oracle documentation for this method we get the following note:
 
 --- 
@@ -45,7 +45,7 @@ the average, behaving as _O(n log n)_ for most inputs.
 
 
 In this part of the lab, you will experiment computing the running time (CPU time)
-for **java.utils.Arrays.sort(int[])** for increasing values of array input size n.
+for  [**java.utils.Arrays.sort(int[])**](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#sort-int:A-) for increasing values of array input size n.
 
 **You will  perform an experiment to verify the following two hypothesis:
 whether the running time of this method behaves more closely as  __O(n^2)__
@@ -56,7 +56,7 @@ When running the code, select option 0 when prompted for choosing Part 1).
 
 The main program for method **AlgAnalysis** already prompts you for the 
 following quantities: "number of arrays to test"(count) and "largest array size"(maxsize)
-which are used in the call of the method: **AlgAnalysisSol.arraySortRuntime(count, maxsize)**.
+which are used in the call of the method: [**AlgAnalysis.arraySortRuntime(count, maxsize)**](https://github.com/kristiania/PG4200-Lab4-V26/blob/614f9589395685997fb42f12987a24f459e39914/src/main/java/assignment/AlgAnalysis.java#L34).
 This means you should test "count" equally spaced array sizes where the largest
 has size "maxsize".
 
@@ -84,12 +84,11 @@ converge to a constant, while the second-to-last fraction should be decreasing.
 ### Part 2) Comparing the running times of two methods for determining if an array has duplicate entries
 
 
-Methods you will implement: **unique1Runtime(int)** and **unique2Runtime(int)**
-Line 60 through 81 in **AlgAnalysis**.
+Methods you will implement: [**unique1Runtime(int)** and **unique2Runtime(int)** Line 60 through 81 in **AlgAnalysis**](https://github.com/kristiania/PG4200-Lab4-V26/blob/614f9589395685997fb42f12987a24f459e39914/src/main/java/assignment/AlgAnalysis.java#L61).
 
 
 We will be comparing the running times of the 
-methods **Unique1.unique1(int[])** and **Unique2.unique2(int[])**.
+methods [**Unique1.unique1(int[])**](https://github.com/kristiania/PG4200-Lab4-V26/blob/614f9589395685997fb42f12987a24f459e39914/src/main/java/assignment/Unique1.java#L20)and [**Unique2.unique2(int[])**](https://github.com/kristiania/PG4200-Lab4-V26/blob/614f9589395685997fb42f12987a24f459e39914/src/main/java/assignment/Unique2.java#L21).
 The two algorithms are theoretically analyzed in the textbook _Data Structures & Algorithms in Java_ in pages 162-163 (sixth edition). . 
 
 
